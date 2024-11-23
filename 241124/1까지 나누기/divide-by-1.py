@@ -1,9 +1,13 @@
 import sys
 
 n = int(sys.stdin.readline())
-idx=1
-while n>0:
-    n=n//idx
-    idx+=1
+idx=0
 
-print(idx-1)
+if n!=0:
+    while n>0:
+        idx+=1
+        n=n//idx    
+else:
+    idx=0
+
+print(idx)
