@@ -1,13 +1,16 @@
 import sys
 
 
-n = int(sys.stdin.readline())
+
 count=0
 total=0
 
-while n<30:
-    total+=n
-    count+=1
+while True:
     n = int(sys.stdin.readline())
-        
+    if n<30:
+        total+=n
+        count+=1
+    else:
+        break
+                
 print(f"{total/count:.2f}")
