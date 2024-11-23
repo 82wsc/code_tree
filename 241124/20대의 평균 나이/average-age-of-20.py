@@ -7,4 +7,5 @@ while True:
         break
     else:
         l.append(n)
+        
 print(f"{sum(l)/len(l):.2f}")
