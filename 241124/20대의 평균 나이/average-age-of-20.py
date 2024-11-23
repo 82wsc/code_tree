@@ -1,9 +1,13 @@
 import sys
 
-l=[]
+
 n = int(sys.stdin.readline())
+count=0
+total=0
+
 while n<30:
-    l.append(n)
+    total+=n
+    count+=1
     n = int(sys.stdin.readline())
         
-print(f"{sum(l)/len(l):.2f}")
+print(f"{total/count:.2f}")
