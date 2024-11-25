@@ -2,10 +2,8 @@ import sys
 
 n = int(sys.stdin.readline())
 
-
-a='*'*n
-for_ in range(n):
-     print(a)
+for _ in range(n):
+    print('*'*n)
 print('\n')
-for_ in range(n):
-     print(a)
+for _ in range(n):
+    print('*'*n)
