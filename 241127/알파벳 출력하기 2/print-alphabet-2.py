@@ -11,7 +11,7 @@ for i in range(n):
         print(chr(cnt),end=" ")
         cnt+=1
 
-    if cnt==ord('Z')+1:
-        cnt=ord('A')
+        if cnt==ord('Z')+1:
+            cnt=ord('A')
     print()
 
