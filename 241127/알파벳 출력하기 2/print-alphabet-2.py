@@ -3,7 +3,7 @@ import sys
 n = int(sys.stdin.readline())
 
 # A:65
-cnt=65
+cnt=ord('A')
 for i in range(n):
     for j in range(i):
         print(" ",end=" ")
