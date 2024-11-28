@@ -8,10 +8,6 @@ while a>1:
     a=a//b
 
 for i in set(cnt):
-    if i==0:
-        c=cnt.count(i)+1
-        s+=1**c
-    else:
-        c=cnt.count(i)    
-        s+=2**c
+    c=cnt.count(i)
+    s+=c**2
 print(s)
