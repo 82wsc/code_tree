@@ -1,6 +1,6 @@
 import sys
 
-s = sys.stdin.readline()
+s = sys.stdin.readline().strip()
 l=[]
 for i in range(len(s)):
     if i%2==1:
