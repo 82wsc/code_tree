@@ -9,5 +9,6 @@ while a!=b:
     temp=a[-1]
     a = a[-1] + a[:-1]
     if cnt==len(a):
-        print(-1)
+        cnt=-1
+        break
 print(cnt)
