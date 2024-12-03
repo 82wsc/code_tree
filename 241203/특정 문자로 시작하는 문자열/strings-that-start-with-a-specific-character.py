@@ -1,17 +1,18 @@
 import sys
 
 n = int(sys.stdin.readline())
-l=[]
-for _ in range(n):
-    l.append(sys.stdin.readline().strip())
-
-s = sys.stdin.readline()
+s=[]
 r=''
 cnt=0
-for i in l:
-    if i[0]==s:
-        r+=i
+for _ in range(n):
+    s.append(sys.stdin.readline().strip())
+
+c=sys.stdin.readline().strip()
+
+for i in range(len(s)):
+    if s[i][0]==c:
+        r+=s[i]
         cnt+=1
 
-
 print(f'{cnt} {len(r)/cnt:.2f}')
+
