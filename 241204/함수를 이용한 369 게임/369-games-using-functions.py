@@ -8,11 +8,10 @@ def in_triple(x):
         return True
 
 def triple(x):
-    if x%3==0:
-        return True
+    return in_triple(x) or (x%3==0)
 
 cnt = 0 
 for i in range(a,b+1):
-    if in_triple(i) or triple(i):
+    if triple(i):
         cnt+=1
 print(cnt)
