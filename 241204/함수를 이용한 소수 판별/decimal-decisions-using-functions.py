@@ -10,9 +10,13 @@ def is_prime(x):
 
 def s_num(x,y):
     s=0
-    for i in range(x,y+1):
-        if is_prime(i):
-            s+=i
+    if x==1 and y==1:
+        s=0
+    else:
+        for i in range(x,y+1):
+            if is_prime(i):
+                print(i)
+                s+=i
 
     return s
 
