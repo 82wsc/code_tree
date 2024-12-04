@@ -15,7 +15,6 @@ def s_num(x,y):
     else:
         for i in range(x,y+1):
             if is_prime(i):
-                print(i)
                 s+=i
 
     return s
