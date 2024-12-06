@@ -12,6 +12,8 @@ def exist_date(y,m,d):
         return -1
     if (m==4 or m==6 or m==9 or m==11) and d==31:
         return -1
+    if m>=13:
+        return -1
     return 1
 
 def season(m):
