@@ -1,7 +1,8 @@
 import sys
 
 def palindrome(A):
-    if A==A[::-1]:
+    A_r = A[::-1]
+    if A==A_r:
         print('Yes')
         
     else:
