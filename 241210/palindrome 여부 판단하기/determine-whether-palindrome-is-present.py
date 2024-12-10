@@ -9,6 +9,6 @@ def palindrome(A):
         print('No')
         
 
-s = sys.stdin.readline()
+s = sys.stdin.readline().strip()
 
 palindrome(s)
