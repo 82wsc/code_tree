@@ -6,7 +6,7 @@ n,k= int(n),int(k)
 a=[]
 for i in range(n):
     x= sys.stdin.readline().strip()
-    if s in x:
+    if x[:len(s)]==s:
         a.append(x)
 
 a.sort()
