@@ -7,8 +7,13 @@ month = [31,28,31,30,31,30,31,31,30,31,30,31]
 
 def count_date(w,x,y,z):    
     count_date = 0
-    count_date = (sum(month[w:y]) + (x-y))%7
+    if w==y:
+        count_date = z-x
+    else:
+        count_date = (month[w-1]-x)+sum(month[w:y-1])+z
 
+    count_date %=7
+    
     print(day[count_date])
 
 count_date(m1,d1,m2,d2)
