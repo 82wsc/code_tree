@@ -10,13 +10,10 @@ def count_date(w,x,y,z):
     if w==y:
         count_date = z-x
     else:
-        count_date = (month[w-1]-x)+sum(month[w:y])+z
+        count_date = (month[w-1]-x)+sum(month[w:y-1])+z
 
-    count_date = (count_date % 7 + 7) % 7
+    count_date = count_date % 7 
     
-    start_day_index = day.index("Mon")  # "Mon"이 항상 0번째 인덱스
-    final_day_index = (start_day_index + count_date) % 7
-
     print(day[count_date])
 
 count_date(m1,d1,m2,d2)
