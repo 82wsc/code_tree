@@ -2,7 +2,7 @@ import sys
 
 n = int(sys.stdin.readline())
 
-l = [0] * 100
+l = [0] * 101
 
 for i in range(n):
     s,e = map(int,sys.stdin.readline().split())
