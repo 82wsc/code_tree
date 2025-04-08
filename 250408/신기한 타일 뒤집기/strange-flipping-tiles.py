@@ -7,8 +7,8 @@ segments = [
     for _ in range(n)
 ]
 
-l = [0] * 201
-c = 100
+l = [0] * 200001
+c = 100000
 
 for a,b in segments:
     a = int(a)
