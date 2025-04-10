@@ -11,6 +11,8 @@ for i in range(n):
         for j in range(i,n-1):
             if l[j]==l[j+1]:
                 cnt+=1
+            else:
+                break
     
     max_c = max(max_c,cnt)
 
