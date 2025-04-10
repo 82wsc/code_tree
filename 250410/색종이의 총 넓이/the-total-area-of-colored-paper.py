@@ -24,11 +24,7 @@ area = 0
 
 for i in range(max_r+1):
     for j in range(max_r+1):
-        if l[i][j] == 1:
-            area+=1
-        elif l[i][j] == 2:
-            area+=1
-        elif l[i][j] == 3:
+        if l[i][j]:
             area+=1
 
 print(area)
