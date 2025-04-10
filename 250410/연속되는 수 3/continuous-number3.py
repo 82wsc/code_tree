@@ -2,19 +2,15 @@ import sys
 
 n = int(sys.stdin.readline())
 
-l = [int(sys.stdin.readline()) for _ in range(n)]
+l=[int(sys.stdin.readline()) for _ in range(n)]
 
-max_c = 0
-
+max_c, cnt = 0, 0
 for i in range(n):
-    if i==0 or l[i]!=l[i-1]:
-        cnt = 0
-        for j in range(i,n-1):
-            if l[j]<0:
-                cnt +=1
-            else:
-                break
+    if i >= 1 and l[i]*l[i-1]>0:
+        cnt +=1
+    else:
+        cnt =1
 
-    max_c = max(max_c, cnt)
+    max_c = max(max_c,cnt)
 
 print(max_c)
