@@ -22,11 +22,14 @@ for n,(x1,y1,x2,y2)  in enumerate(segments):
 
 w = []
 h = []
+
 for i in range(max_r+1):
     for j in range(max_r+1):
         if l[i][j]==1:
             w.append(i)
             h.append(j)
-
-area =(max(w)-min(w))*(max(h)-min(h)) 
+if not w:
+    area = 0
+else:
+    area =(max(w)-min(w))*(max(h)-min(h)) 
 print(area)        
