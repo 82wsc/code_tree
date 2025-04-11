@@ -32,21 +32,24 @@ def func(segments,l):
             for x in range(idx,idx+i):
                 l[x] = l[x-1] - 1
             idx += i
-    return l
+    return idx
 
-func(segments_a,l_a)
-func(segments_b,l_b)
+idx_a = func(segments_a,l_a)
+idx_b = func(segments_b,l_b)
+
+end = min(idx_a, idx_b)
 
 i = 1
 found = False
 
-while i < max_r:
+while i < end:
     if l_a[i] == l_b[i]:
-        print(i)
         found = True
         break
     i += 1
 
-if not found:
+if found:
+    print(i)
+else:
     print(-1)
 
