@@ -37,10 +37,16 @@ def func(segments,l):
 func(segments_a,l_a)
 func(segments_b,l_b)
 
-for i in range(1,max_r):
-    if l_a[i]==l_b[i]:
+i = 1
+found = False
+
+while i < max_r:
+    if l_a[i] == l_b[i]:
         print(i)
+        found = True
         break
-else:
+    i += 1
+
+if not found:
     print(-1)
 
