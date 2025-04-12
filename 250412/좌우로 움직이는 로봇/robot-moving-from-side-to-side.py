@@ -2,7 +2,7 @@ import sys
 
 n,m = map(int,sys.stdin.readline().split())
 
-max_r = 1000000
+max_r = 10000000
 
 d_a, d_b = [0 for _ in range(max_r)], [0 for _ in range(max_r)] 
 
