@@ -2,10 +2,10 @@ import sys
 
 o = list(sys.stdin.readline().strip())
 
-nx,ny= 0,0
-dx, dy = [1,-1,0,0], [0,0,1,-1]
+x,y= 0,0
+dx, dy = [0, 1, 0, -1],[1, 0, -1, 0]
 
-dir_num = 2
+dir_num = 0
 
 for i in o:
     if i=='R':
@@ -15,6 +15,6 @@ for i in o:
         dir_num = (dir_num - 1 + 4) % 4
 
     if i=='F':
-        nx,ny = nx + dx[dir_num], ny + dy[dir_num]
+        x,y = x + dx[dir_num], y + dy[dir_num]
 
-print(nx,ny)
+print(x,y)
