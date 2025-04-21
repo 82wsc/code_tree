@@ -14,20 +14,19 @@ d = {
     'L': 3 
 }
 
-dir_idx = d[o]
+move_dir = d[o]
 
 def in_range(x,y):
     return 0<=x and x<n and 0<=y and y<n
 
-def keep_moving(x,y,dir_idx):
-    nx, ny = x + dxs[dir_idx], y + dys[dir_idx]
-    if not in_range(nx,ny):
-        dir_idx = 3- dir_idx
-    
-    x,y = x+dxs[dir_idx], y+dys[dir_idx]
-    return x, y, dir_idx
-
-for _ in range(1,t):
-    x, y, dir_idx = keep_moving(x, y, dir_idx)
+# simulation 진행
+for _ in range(t):
+    nx, ny = x + dxs[move_dir], y + dys[move_dir]
+    # 범위 안에 들어온다면 그대로 진행합니다.
+    if in_range(nx, ny):
+        x, y = nx, ny
+    # 벽에 부딪힌다면, 방향을 바꿔줍니다.
+    else:
+        move_dir = 3 - move_dir
 
 print(x+1,y+1)
