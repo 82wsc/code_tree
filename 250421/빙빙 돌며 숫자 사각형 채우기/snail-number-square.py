@@ -20,7 +20,7 @@ for i in range(2, n * m + 1):
     nx, ny = x + dxs[dir_num], y + dys[dir_num]
     
     if not in_range(nx, ny) or answer[nx][ny] != 0:
-        dir_num = (dir_num + 1) % n
+        dir_num = (dir_num + 1) % 4
 
     x, y = x + dxs[dir_num], y + dys[dir_num]
     answer[x][y] = i
