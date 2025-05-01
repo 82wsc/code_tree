@@ -22,7 +22,8 @@ for i in range(2,n*m+1):
         dir_num = (dir_num + 1) % 4
     
     x,y = x+dxs[dir_num], y+dys[dir_num]
-    l[x][y] = chr(o+i-1)
+
+    l[x][y] = chr(o+(i-1)%26)
 
 for i in range(n):
     for j in range(m):
