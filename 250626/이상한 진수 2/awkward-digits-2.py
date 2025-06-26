@@ -1,5 +1,21 @@
 import sys
 
-a = list(map(int,sys.stdin.readline().split()))
+a = list(sys.stdin.readline().strip())
 
-print(a)
+n = len(a)
+
+sum_diff = 0
+
+for i in range(n):
+    a_copy = a[:]
+    temp = 0
+
+    if a_copy[i]=='0':
+        a_copy[i]='1'
+
+    for j in range(n):
+        temp += (2**(n-j-1))* int(a_copy[j])
+
+    sum_diff = max(sum_diff,temp)
+
+print(sum_diff)
