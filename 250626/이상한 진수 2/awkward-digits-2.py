@@ -12,13 +12,12 @@ for i in range(n):
 
     if a_copy[i]=='0':
         a_copy[i]='1'
+    else:
+        a_copy[i]='0'
 
     for j in range(n):
         temp += (2**(n-j-1))* int(a_copy[j])
 
     sum_diff = max(sum_diff,temp)
 
-if sum_diff == 1:
-    print(0)
-else:
-    print(sum_diff)
+print(sum_diff)
