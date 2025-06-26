@@ -4,7 +4,7 @@ a = list(sys.stdin.readline().strip())
 
 n = len(a)
 
-sum_diff = 0
+sum_diff = -sys.maxsize
 
 for i in range(n):
     a_copy = a[:]
@@ -18,4 +18,7 @@ for i in range(n):
 
     sum_diff = max(sum_diff,temp)
 
-print(sum_diff)
+if sum_diff == 1:
+    print(0)
+else:
+    print(sum_diff)
