@@ -7,15 +7,15 @@ l = [
     for _ in range(n)
 ]
 
-sum_max = -sys.maxsize
+max_sum = -sys.maxsize
 
-for i in range(n-1):
+for i in range(n):
     for j in range(n-2):
-        sum_max = max(sum_max,sum(l[i][j:j+3])+sum(l[i+1][j:j+3]))
+        for k in range(n):
+            for x in range(n-2):
+                if i == k:
+                    if j <= x <= j + 2 or x <= j <= x + 2:
+                        continue
+                max_sum = max(max_sum,sum(l[i][j:j+3])+sum(l[k][x:x+3]))
 
-if n>=6:
-    for i in range(n):
-         for j in range(n-5):  
-            sum_max = max(sum_max, sum(l[i][j:j+3])+sum(l[i][j+3:j+6]))
-
-print(sum_max)
+print(max_sum)        
