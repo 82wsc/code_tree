@@ -30,6 +30,6 @@ for i in range(len(arr)):
                 
                 if diff<ans:
                     ans = diff
-                    found = True
+                    find = True
 
-print(ans if found else -1)
+print(ans if find else -1)
